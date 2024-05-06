@@ -1,0 +1,428 @@
+/* Reset Styles */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5; 
+}
+
+/* Header Styles */
+header {
+  background-color: #f5f5f5;
+  transition: background-color 0.3s ease;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* Title Styles */
+.title {
+  color: #f5f5f5;
+  transition: color 0.3s ease;
+}
+
+/* Icon Styles */
+.icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2; 
+  color: #000000;
+}
+
+.on-icon {
+  right: -3px;
+  top: 13px;
+  height: 19px;
+}
+
+.off-icon {
+  right: -3px;
+  top: 110px;
+  height: 19px;
+  color: #ffffff;
+}
+
+.dark-mode .off-icon {
+  color: #ffffff;
+}
+
+/* Switch Styles */
+.switch {
+  position: absolute;
+  top: 0px; /* Adjust top position as needed */
+  right: 55px;
+  width: 18px;
+  height: 140px;
+  float: right;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 20px;
+}
+
+/* Slider Styles */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #7b7b7b;
+  transition: background-color 0.4s ease; 
+}
+
+.dark-mode .slider:before {
+  background-color: #000000; 
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 2.2px;
+  bottom: 120px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+/* Checked Slider Styles */
+input:checked + .slider {
+  background-color: #303030;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #303030;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateY(97px);
+  -ms-transform: translateY(97px);
+  transform: translateY(97px);
+}
+
+/* Logo Styles */
+#logo {
+  height: 100px;
+}
+
+/* Navigation Styles */
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: block;
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* Link Styles */
+li {
+  padding: 3px;
+}
+
+a {
+  text-decoration: none;
+  color: #f5f5f5;
+}
+
+/* Hover Styles */
+ul li {
+  transition: background-color 0.3s; 
+}
+
+ul li a {
+  color: white;
+}
+
+/* Hover State */
+ul li:hover {
+  background-color: black; 
+}
+
+ul li:hover a {
+  color: white; 
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+/* Dark Mode Styles */
+.dark-mode footer {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Parallax Styles */
+#drag {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+
+.title {
+  font-size: 7rem;
+  -webkit-text-stroke: 2px black; 
+}
+
+.paralax {
+  height: 100vh;
+  overflow-y: auto; 
+  overflow-x: hidden;
+  perspective: 10px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.dragon {
+  transform: translateZ(-10px) scale(2);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#topsec {
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  padding-bottom: 15px;
+}
+
+#mySVG {
+  height: 500px;
+  position: relative;
+  margin-left: 20%;
+  background-color: #fff;
+}
+
+.pickerBox {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  padding-top: 35px;
+  background-color:  #f5f5f5;
+}
+
+.dark-mode .pickerBox {
+  background-color: #303030;
+}
+
+#changeColorBtn {
+  position:relative;
+  margin: auto;
+}
+
+.ColorPicker {
+  display: flex;
+  padding-right: 150px;
+}
+
+/* Slider Bar Styles */
+.container {
+  overflow: auto;
+}
+
+.slider-outer {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.slider-inner {
+  width: 800px; 
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  padding: 10px;
+  border: #000 solid 1px;
+  display: flex;
+  transition: transform 0.5s ease; 
+}
+
+.dark-mode .slider-inner{
+background-color: #666;
+}
+
+.slider-inner img {
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  width: auto;
+  display: none; 
+}
+
+.slider-inner img.active {
+  display: block; 
+}
+
+/* Previous and Next Button Styles */
+.prev,
+.next {
+  float: left;
+  margin-top: 220px;
+  cursor: pointer;
+  position: relative;
+  z-index: 100;
+  width: 36px; 
+  height: 36px; 
+}
+
+.prev:hover,
+.next:hover {
+  fill: rgb(106, 106, 106);
+}
+
+.prev {
+  position: relative;
+  z-index:100;
+}
+
+.next {
+  position: relative;
+  z-index:100;
+}
+
+.ColorPicker {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #303030;
+  color: #f5f5f5;
+}
+
+.dark-mode .title {
+  color: #000000;
+}
+
+.dark-mode nav ul li a {
+  color: white;
+}
+
+.dark-mode ul li:hover {
+  background-color: white;
+}
+
+/* Navigation Links Hover State Styles in Dark Mode */
+.dark-mode nav ul li:hover a {
+  color: black;
+}
+
+.dark-mode header {
+  background-color: #303030;
+}
+
+section.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+#services {
+  padding: 20px;
+}
+
+#contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#contact-form {
+  padding: 10px;
+}
+
+#contact-form div {
+  margin-bottom: 15px;
+}
+
+#contact-form label {
+  display: block;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#contact-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#contact-form button:hover {
+  background-color: #000000;
+}
+
+/* Dark Mode Styles for Contact Form */
+.dark-mode #contact-container {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode #contact-form input,
+.dark-mode #contact-form textarea {
+  background-color: #444;
+  color: #fff;
+  border-color: #666;
+}
+
+.dark-mode #contact-form button {
+  background-color: #000000;
+}
